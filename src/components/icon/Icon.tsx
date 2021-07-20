@@ -8,11 +8,13 @@ interface IconProps {
 
 const Icon = ({ onClick, src }: IconProps): JSX.Element => {
   return (
-    <button
-      className="Icon transition-basic"
-      onClick={onClick}
-    >
-      <img className="Icon-image" alt="Menu button" src={src} />
+    <button className="Icon transition-basic" onClick={onClick}>
+      <img
+        className="Icon-image"
+        alt="Menu button"
+        src={src}
+        draggable="false"
+      />
     </button>
   );
 };
