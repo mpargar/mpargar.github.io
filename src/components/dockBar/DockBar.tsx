@@ -1,12 +1,10 @@
 import "./DockBar.css";
-import MenuIcon from "../../assets/img/Menu.svg";
-import Icon from "../icon/Icon";
+import MenuButton from "../menuButton/MenuButton";
 
 const DockBar = (): JSX.Element => {
-  const handleClick = (): void => {};
   return (
     <div className="DockBar DockBarDark">
-      <Icon onClick={handleClick} src={MenuIcon} />
+			<MenuButton />
     </div>
   );
 };
