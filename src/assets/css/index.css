@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Montserrat&display=swap");
+
+body {
+  font-family: "Fira Code", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.fira-code {
+  font-family: "Fira Code", monospace;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+

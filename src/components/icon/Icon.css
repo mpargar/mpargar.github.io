@@ -1,0 +1,21 @@
+.Icon {
+  background-color: rgba(255,255,255, 0);
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.Icon:hover {
+  background-color: rgba(255,255,255, 0.3);
+}
+
+.Icon-image {
+  height: 100%;
+  width: 100%;
+}

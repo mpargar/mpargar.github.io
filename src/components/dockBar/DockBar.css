@@ -1,0 +1,20 @@
+.DockBar {
+  --padding: 10px;
+  --height: 4.5vh;
+  --width: 98vw;
+  --margin-from-side: calc((100vw - var(--width) - var(--padding)) / 2);
+  position: relative;
+  height: 4.5vh;
+  width: calc(var(--width) - var(--padding));
+  left: var(--margin-from-side);
+  top: calc(100vh - var(--height) - var(--padding)*2 - var(--margin-from-side));
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.DockBarDark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
