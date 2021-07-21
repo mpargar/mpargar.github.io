@@ -1,7 +1,7 @@
 import React from "react";
 import wallpaper from "./assets/img/wallpaper.jpg";
 import "./App.css";
-import DockBar from "./components/dockBar/DockBar";
+import {DockBar, Menu} from "./components";
 
 function App(): JSX.Element {
   const wallpaperStyles: React.CSSProperties = {
@@ -12,6 +12,7 @@ function App(): JSX.Element {
   };
   return (
     <div className="App" style={wallpaperStyles}>
+			<Menu />
       <DockBar />
     </div>
   );

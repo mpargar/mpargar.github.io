@@ -1,0 +1,7 @@
+.Menu {
+	position: absolute;
+	width: 100%;
+	max-width: 650px;
+	min-height: 450px;
+	border-radius: 5px;
+}

@@ -1,10 +1,10 @@
 import "./DockBar.css";
-import MenuButton from "../menuButton/MenuButton";
+import { MenuButton } from "../index";
 
 const DockBar = (): JSX.Element => {
   return (
-    <div className="DockBar DockBarDark">
-			<MenuButton />
+    <div className="DockBar translucentBackground">
+      <MenuButton />
     </div>
   );
 };

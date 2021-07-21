@@ -7,9 +7,9 @@ export interface IProgramListItem {
   id: number;
 }
 
-export interface IState {
+export interface IProgramsState {
   programList: IProgramListItem[];
 }
 
-export const createState = (newState: IState): IState => newState;
+export const createProgramsState = (newState: IProgramsState): IProgramsState => newState;
 

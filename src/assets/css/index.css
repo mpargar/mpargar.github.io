@@ -16,4 +16,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.translucentBackground {
+	background-color: rgba(0,0,0,0.8);
+}
 
