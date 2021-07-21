@@ -1,17 +1,8 @@
 .Menu {
-	opacity: 1;
 	position: absolute;
 	width: 100%;
 	max-width: 650px;
 	min-height: 450px;
 	border-radius: 5px;
-}
-
-.Menu-Close {
-	display: none;
-}
-
-.Menu-Transparent {
-	opacity: 0;
 }
 

@@ -20,3 +20,16 @@ body {
 	background-color: rgba(0,0,0,0.8);
 }
 
+/* Transition opacity */
+
+.Transition-Opacity-Open {
+	opacity: 1;
+}
+
+.Transition-Opacity-Transparent {
+	opacity: 0;
+}
+
+.Transition-Opacity-Close {
+	display: none;
+}
