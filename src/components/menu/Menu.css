@@ -1,8 +1,16 @@
 .Menu {
-	position: absolute;
-	width: 100%;
-	max-width: 650px;
-	min-height: 450px;
-	border-radius: 5px;
+  --max-width: 650px;
+  --margin-from-side-dock: calc((100vw - 98vw - 10px) / 2);
+  --dock-height: 4.5vh + 20px;
+  --margin-from-bottom: calc(
+    var(--margin-from-side-dock) * 2 + var(--dock-height)
+  );
+  --margin-from-left: calc(50vw - var(--max-width) / 2);
+  position: fixed;
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 450px;
+  border-radius: 5px;
+  bottom: var(--margin-from-bottom);
+  left: var(--margin-from-left);
 }
-

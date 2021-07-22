@@ -3,7 +3,7 @@ import { MenuButton } from "../index";
 
 const DockBar = (): JSX.Element => {
   return (
-    <div className="DockBar translucentBackground">
+    <div className="DockBar translucent-background">
       <MenuButton />
     </div>
   );
