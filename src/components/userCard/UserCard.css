@@ -1,0 +1,26 @@
+.UserCard {
+  display: flex;
+}
+.UserCardData {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 5px;
+}
+
+.UserCardData > h1,
+.UserCardData > h2 {
+  margin: 0;
+  padding: 0;
+  color: #e9e9e9;
+}
+
+.UserCardData > h1 {
+  font-size: 17pt;
+	font-weight: 700;
+}
+
+.UserCardData > h2 {
+  font-size: 11pt;
+	font-weight: 500;
+}

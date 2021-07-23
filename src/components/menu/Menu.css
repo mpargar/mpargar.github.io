@@ -13,4 +13,6 @@
   border-radius: 5px;
   bottom: var(--margin-from-bottom);
   left: var(--margin-from-left);
+	box-sizing: border-box;
+	padding: 10px 20px;
 }

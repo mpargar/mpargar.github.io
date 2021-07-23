@@ -5,6 +5,7 @@ import "./Menu.css";
 import { bindActionCreators } from "redux";
 import * as MenuActionCreators from "../../store/reducers/menu/action-creators";
 import { useEffect, useRef } from "react";
+import UserCard from "../userCard/UserCard";
 
 const Menu = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -14,12 +15,12 @@ const Menu = (): JSX.Element => {
   const { MenuSetVisible } = bindActionCreators(MenuActionCreators, dispatch);
 
   const handleOnBlur = () => {
-		// TODO: Fix para el error visual al blur dandole click al boton (debe arreglarse).
+    // TODO: Fix para el error visual al blur dandole click al boton (debe arreglarse).
     setTimeout(() => MenuSetVisible(false), 200);
   };
 
   useEffect(() => {
-    if (visible) menuContainerRef?.current?.focus();
+    //if (visible) menuContainerRef?.current?.focus();
   }, [visible, classes]);
 
   return (
@@ -29,7 +30,7 @@ const Menu = (): JSX.Element => {
       onBlur={handleOnBlur}
       ref={menuContainerRef}
     >
-      Hola mundo{" "}
+      <UserCard />
     </div>
   );
 };

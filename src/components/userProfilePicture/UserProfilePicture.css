@@ -1,0 +1,5 @@
+.UserProfilePicture {
+  --dimentions: 100px;
+  height: var(--dimentions);
+  width: var(--dimentions);
+}
