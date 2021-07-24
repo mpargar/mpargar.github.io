@@ -17,10 +17,7 @@ const Menu = (): JSX.Element => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        menuContainerRef.current &&
-        !menuContainerRef.current.contains(event.target as Node)
-      ) {
+      if (!menuContainerRef?.current?.contains(event.target as Node)) {
         MenuSetVisible(false);
       }
     };
