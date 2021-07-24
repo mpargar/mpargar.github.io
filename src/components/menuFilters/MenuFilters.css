@@ -1,0 +1,7 @@
+.Filters {
+  border-top: rgba(255, 255, 255, 0.3) solid 1px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
