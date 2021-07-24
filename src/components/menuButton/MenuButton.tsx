@@ -8,13 +8,12 @@ import { State } from "../../store";
 const MenuButton = (): JSX.Element => {
   const dispatch = useDispatch();
   const { MenuSetVisible } = bindActionCreators(MenuActionCreators, dispatch);
-  const { visible } = useSelector((state: State) => state.menu);
 
   const handleClick = (): void => {
     MenuSetVisible(true);
   };
 
-  return <Icon onClick={handleClick} src={MenuIcon} disabled={visible} />;
+  return <Icon onClick={handleClick} src={MenuIcon} />;
 };
 
 export default MenuButton;
