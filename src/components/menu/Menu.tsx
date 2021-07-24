@@ -21,7 +21,7 @@ const Menu = (): JSX.Element => {
   };
 
   useEffect(() => {
-//    if (visible) menuContainerRef?.current?.focus();
+    if (visible) menuContainerRef?.current?.focus();
   }, [visible, classes]);
 
   return (
@@ -32,7 +32,7 @@ const Menu = (): JSX.Element => {
       ref={menuContainerRef}
     >
       <UserCard />
-			<MenuAppList />
+      <MenuAppList />
     </div>
   );
 };

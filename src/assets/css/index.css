@@ -31,5 +31,5 @@ body {
 }
 
 .Transition-Opacity-Close {
-	display: none;
+	display: none!important;
 }

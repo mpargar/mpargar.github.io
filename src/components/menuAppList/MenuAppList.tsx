@@ -5,8 +5,8 @@ import { mdiMagnify } from "@mdi/js";
 import "./MenuAppList.css";
 import {
   mdiSortAlphabeticalVariant,
-  mdiSortAlphabeticalAscendingVariant,
-  mdiSortAlphabeticalDescendingVariant,
+  //  mdiSortAlphabeticalAscendingVariant,
+  //  mdiSortAlphabeticalDescendingVariant,
   mdiHistory,
 } from "@mdi/js";
 
@@ -20,8 +20,8 @@ const MenuAppList = () => {
       </div>
       <div className="AppsContainer">
         <div className="IconsGrid">
-          {Array.from(Array(12).keys()).map(() => (
-            <div className="IconAppContainer">
+          {Array.from(Array(12).keys()).map((v) => (
+            <div className="IconAppContainer" key={v}>
               <Icon onClick={handleClick} src={FileImage} label="Archivos" />
             </div>
           ))}{" "}
