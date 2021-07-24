@@ -15,20 +15,26 @@ const Menu = (): JSX.Element => {
   const classes = useOpacityTransitionClass(visible);
   const { MenuSetVisible } = bindActionCreators(MenuActionCreators, dispatch);
 
-  const handleOnBlur = () => {
-    // TODO: Fix para el error visual al blur dandole click al boton (debe arreglarse).
-    setTimeout(() => MenuSetVisible(false), 200);
-  };
-
   useEffect(() => {
-    // if (visible) menuContainerRef?.current?.focus();
-  }, [visible, classes]);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuContainerRef.current &&
+        !menuContainerRef.current.contains(event.target as Node)
+      ) {
+        MenuSetVisible(false);
+      }
+    };
+    if (visible) document.addEventListener("mousedown", handleClickOutside);
+    else document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [visible, MenuSetVisible]);
 
   return (
     <div
       tabIndex={-1}
       className={`Menu translucent-background transition-basic ${classes}`}
-      onBlur={handleOnBlur}
       ref={menuContainerRef}
     >
       <UserCard />
