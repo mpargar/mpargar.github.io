@@ -10,6 +10,7 @@ interface IconProps {
   src?: string;
   icon?: string;
   hoverEffect?: boolean;
+  label?: string;
 }
 
 const Icon = ({
@@ -19,6 +20,7 @@ const Icon = ({
   disabled = false,
   hoverEffect = true,
   icon = "",
+  label,
 }: IconProps): JSX.Element => {
   const [optionalClasses, setOptionalClasses] = useState<string>("");
 
@@ -48,6 +50,7 @@ const Icon = ({
       ) : (
         "No src or icon"
       )}
+      {label && <span className="Icon-Label">{label}</span>}
     </button>
   );
 };

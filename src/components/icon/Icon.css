@@ -5,10 +5,11 @@
   height: 100%;
   padding: 6px;
   display: flex;
+	flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   border-radius: 5px;
+	position: relative;
 }
 
 .Icon-Hover:hover {
@@ -22,4 +23,15 @@
 .Icon-image {
   height: 100%;
   width: 100%;
+}
+
+.Icon-Label {
+	font-family: "Fira Code";
+	font-size: 10pt;
+	color: #E9E9E9;
+	font-weight: 700;
+	position: absolute;
+	bottom: -20px;
+	width: 100%;
+	text-align: center;
 }

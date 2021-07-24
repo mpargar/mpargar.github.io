@@ -1,5 +1,6 @@
 .UserCard {
   display: flex;
+	margin-bottom: 5px;
 }
 .UserCardData {
 	display: flex;
