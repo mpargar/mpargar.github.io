@@ -18,14 +18,12 @@ const MenuAppList = () => {
         <Icon onClick={handleClick} icon={mdiSortAlphabeticalVariant} />
         <Icon onClick={handleClick} icon={mdiHistory} />
       </div>
-      <div className="AppsContainer">
-        <div className="IconsGrid">
-          {Array.from(Array(12).keys()).map((v) => (
-            <div className="IconAppContainer" key={v}>
-              <Icon onClick={handleClick} src={FileImage} label="Archivos" />
-            </div>
-          ))}{" "}
-        </div>
+      <div className="IconsGrid">
+        {Array.from(Array(12).keys()).map((v) => (
+          <div className="IconAppContainer" key={v}>
+            <Icon onClick={handleClick} src={FileImage} label="Archivos" />
+          </div>
+        ))}{" "}
       </div>
       <div className="SearchInput">
         <input type="text" placeholder="Search..." />

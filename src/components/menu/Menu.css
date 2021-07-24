@@ -9,7 +9,6 @@
   position: fixed;
   width: 100%;
   max-width: var(--max-width);
-  min-height: 500px;
   border-radius: 5px;
   bottom: var(--margin-from-bottom);
   left: var(--margin-from-left);
