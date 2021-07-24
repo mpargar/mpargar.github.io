@@ -1,8 +1,7 @@
 import Icon from "../icon/Icon";
 import FileImage from "../../assets/img/Arhive.svg";
-import MdiIcon from "@mdi/react";
-import { mdiMagnify } from "@mdi/js";
 import "./MenuAppList.css";
+import SearchInput from "../searchInput/SearchInput";
 import {
   mdiSortAlphabeticalVariant,
   //  mdiSortAlphabeticalAscendingVariant,
@@ -23,17 +22,9 @@ const MenuAppList = () => {
           <div className="IconAppContainer" key={v}>
             <Icon onClick={handleClick} src={FileImage} label="Archivos" />
           </div>
-        ))}{" "}
+        ))}
       </div>
-      <div className="SearchInput">
-        <input type="text" placeholder="Search..." />
-        <MdiIcon
-          className="SearchInputIcon"
-          path={mdiMagnify}
-          size={1}
-          color="black"
-        />
-      </div>
+			<SearchInput />
     </div>
   );
 };

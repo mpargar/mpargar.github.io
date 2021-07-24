@@ -1,0 +1,22 @@
+.SearchInput {
+  width: 100%;
+  position: relative;
+}
+
+.SearchInput > input {
+  font-family: "Fira Code";
+  font-weight: 700;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  padding-left: 35px;
+}
+
+.SearchInputIcon {
+  position: absolute;
+  left: 5px;
+  top: 2.5px;
+}
