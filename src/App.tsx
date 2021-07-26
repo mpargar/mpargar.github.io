@@ -1,8 +1,7 @@
 import React from "react";
 import wallpaper from "./assets/img/wallpaper.jpg";
 import "./App.css";
-import {DockBar, Menu} from "./components";
-
+import { DockBar, Menu, Window } from "./components";
 function App(): JSX.Element {
   const wallpaperStyles: React.CSSProperties = {
     backgroundImage: `url(${wallpaper})`,
@@ -12,7 +11,25 @@ function App(): JSX.Element {
   };
   return (
     <div className="App" style={wallpaperStyles}>
-			<Menu />
+      <Window
+        menu={[
+          {
+            label: "File",
+            action: () => {
+              console.log("File");
+            },
+          },
+          {
+            label: "Edit",
+            action: () => {
+              console.log("Edit");
+            },
+          },
+        ]}
+      >
+        Test...
+      </Window>
+      <Menu />
       <DockBar />
     </div>
   );

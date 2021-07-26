@@ -1,0 +1,61 @@
+.Window {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  min-width: 700px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Window-top-bar {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+	align-items: center;
+}
+
+.WindowMenuItem {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.WindowMenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.WindowMenuItem:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.WindowControlButton {
+	border: none;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border-radius: 100%;
+	height: 13px;
+	width: 13px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.WindowControlButton:active {
+	opacity: 80%;
+}
+
+.WindowControlButton-Minimize {
+	background-color: #FF9900;
+}
+
+.WindowControlButton-Maximize {
+	background-color: #33FF00;
+}
+
+.WindowControlButton-Close {
+	background-color: #FF0000;
+}

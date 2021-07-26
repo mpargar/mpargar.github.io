@@ -1,4 +1,12 @@
-export {default as DockBar} from './dockBar/DockBar';
-export {default as Icon} from './icon/Icon';
-export {default as Menu} from './menu/Menu';
-export {default as MenuButton} from './menuButton/MenuButton';
+export { default as DockBar } from "./dockBar/DockBar";
+export { default as Icon } from "./icon/Icon";
+export { default as Menu } from "./menu/Menu";
+export { default as MenuAppList } from "./menuAppList/MenuAppList";
+export { default as MenuButton } from "./menuButton/MenuButton";
+export { default as MenuFilters } from "./menuFilters/MenuFilters";
+export { default as MenuIconsGrid } from "./menuIconsGrid/MenuIconsGrid";
+export { default as SearchInput } from "./searchInput/SearchInput";
+export { default as UserCard } from "./userCard/UserCard";
+export { default as UserLinks } from "./userLinks/UserLinks";
+export { default as UserProfilePicture } from "./userProfilePicture/UserProfilePicture";
+export { default as Window } from "./window/Window";
