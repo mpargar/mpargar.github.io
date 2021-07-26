@@ -2,6 +2,8 @@ import React from "react";
 import wallpaper from "./assets/img/wallpaper.jpg";
 import "./App.css";
 import { DockBar, Menu, Window } from "./components";
+import IconTest from "./assets/img/Arhive.svg";
+
 function App(): JSX.Element {
   const wallpaperStyles: React.CSSProperties = {
     backgroundImage: `url(${wallpaper})`,
@@ -26,6 +28,7 @@ function App(): JSX.Element {
             },
           },
         ]}
+				processData={{icon:IconTest, label: "Archivos"}}
       >
         Test...
       </Window>

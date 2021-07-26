@@ -2,12 +2,18 @@ import React from "react";
 import { IWindowMenuItem, WindowMenuItem } from "./WindowMenuItem";
 import WindowControlButton from "./WindowControlButton";
 
+interface IProcessData {
+  icon: string;
+  label: string;
+}
+
 interface IWindowProps {
   children: React.ReactNode;
   menu: IWindowMenuItem[];
+  processData: IProcessData;
 }
 
-const Window = ({ children, menu }: IWindowProps): JSX.Element => {
+const Window = ({ children, menu, processData }: IWindowProps): JSX.Element => {
   return (
     <div className="Window">
       <div className="Window-top-bar">
@@ -16,7 +22,10 @@ const Window = ({ children, menu }: IWindowProps): JSX.Element => {
             <WindowMenuItem {...menuItemData} key={menuItemData.label} />
           ))}
         </div>
-        <div className="Window-label">Label Test</div>
+        <div className="Window-title">
+          <img className="Window-icon" src={processData.icon} />
+          {processData.label}
+        </div>
         <div className="Window-controls">
           <WindowControlButton
             action={() => console.log("Min")}
