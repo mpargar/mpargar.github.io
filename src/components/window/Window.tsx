@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { IWindowMenuItem, WindowMenuItem } from "./WindowMenuItem";
 import WindowControlButton from "./WindowControlButton";
+import useMakeDraggable from "../../hooks/useMakeDraggable";
 
 interface IProcessData {
   icon: string;
@@ -14,16 +15,24 @@ interface IWindowProps {
 }
 
 const Window = ({ children, menu, processData }: IWindowProps): JSX.Element => {
+  const draggableArea = useRef<HTMLDivElement>(null);
+  const movableElement = useRef<HTMLDivElement>(null);
+  useMakeDraggable(draggableArea, movableElement);
   return (
-    <div className="Window">
+    <div className="Window" ref={movableElement}>
       <div className="Window-top-bar">
         <div className="Window-menu">
           {menu.map((menuItemData) => (
             <WindowMenuItem {...menuItemData} key={menuItemData.label} />
           ))}
         </div>
-        <div className="Window-title">
-          <img className="Window-icon" src={processData.icon} />
+        <div className="Window-title" ref={draggableArea}>
+          <img
+            className="Window-icon"
+            src={processData.icon}
+            alt={processData.label}
+            draggable={false}
+          />
           {processData.label}
         </div>
         <div className="Window-controls">

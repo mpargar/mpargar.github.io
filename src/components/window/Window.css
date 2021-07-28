@@ -5,6 +5,8 @@
   min-height: 700px;
   display: flex;
   flex-direction: column;
+	left: 300px;
+	top: 100px;
 }
 
 .Window-top-bar {
@@ -64,7 +66,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-	flex: 1;
+  flex: 1;
+  cursor: move;
+  user-select: none;
 }
 
 .Window-icon {
