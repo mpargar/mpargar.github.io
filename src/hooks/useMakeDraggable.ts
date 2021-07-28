@@ -29,7 +29,6 @@ const useMakeDraggable = (
           y: lastCursorPosition.y - e.clientY,
         };
         const { left, top } = movableElement.current.getBoundingClientRect();
-        console.log(left, top, cursorChange);
         let newTop = top - cursorChange.y;
         let newLeft = left - cursorChange.x;
         movableElement.current.style.top = `${newTop}px`;
