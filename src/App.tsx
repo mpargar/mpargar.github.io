@@ -20,6 +20,20 @@ function App(): JSX.Element {
             action: () => {
               console.log("File");
             },
+            options: [
+              {
+                label: "long long label 1",
+                action: () => {
+                  console.log("Label 1");
+                },
+              },
+              {
+                label: "label 2",
+                action: () => {
+                  console.log("Label 2");
+                },
+              },
+            ],
           },
           {
             label: "Edit",
@@ -28,7 +42,7 @@ function App(): JSX.Element {
             },
           },
         ]}
-				processData={{icon:IconTest, label: "Archivos"}}
+        processData={{ icon: IconTest, label: "Archivos" }}
       >
         Test...
       </Window>

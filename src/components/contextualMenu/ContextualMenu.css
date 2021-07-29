@@ -1,0 +1,24 @@
+.ContextualMenu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	flex-direction: column;
+}
+
+.ContextualMenuButton {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+	text-align: left;
+}
+
+.ContextualMenuButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ContextualMenuButton:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}

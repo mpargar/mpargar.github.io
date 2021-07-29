@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { IWindowMenuItem, WindowMenuItem } from "./WindowMenuItem";
+import WindowMenuItem, { IWindowMenuItem } from "./WindowMenuItem";
 import WindowControlButton from "./WindowControlButton";
 import useMakeDraggable from "../../hooks/useMakeDraggable";
 
@@ -8,7 +8,7 @@ interface IProcessData {
   label: string;
 }
 
-interface IWindowProps {
+export interface IWindowProps {
   children: React.ReactNode;
   menu: IWindowMenuItem[];
   processData: IProcessData;
