@@ -40,6 +40,20 @@ function App(): JSX.Element {
             action: () => {
               console.log("Edit");
             },
+            options: [
+              {
+                label: "long long label 1",
+                action: () => {
+                  console.log("Label 1");
+                },
+              },
+              {
+                label: "label 2",
+                action: () => {
+                  console.log("Label 2");
+                },
+              },
+            ],
           },
         ]}
         processData={{ icon: IconTest, label: "Archivos" }}
