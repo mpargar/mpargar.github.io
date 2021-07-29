@@ -20,13 +20,13 @@ const useContextualEvent = (
     };
     if (suscribeVariable !== undefined) {
       if (suscribeVariable)
-        document.addEventListener("click", handleClickOutside);
-      else document.removeEventListener("click", handleClickOutside);
+        document.addEventListener("mousedown", handleClickOutside);
+      else document.removeEventListener("mousedown", handleClickOutside);
     } else {
-      document.addEventListener("click", handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [element, suscribeVariable, onClickInside, onClickOutside]);
 };
