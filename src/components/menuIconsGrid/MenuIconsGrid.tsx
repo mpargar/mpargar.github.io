@@ -1,16 +1,25 @@
 import "./MenuIconsGrid.css";
-import FileImage from "../../assets/img/Arhive.svg";
 import Icon from "../icon/Icon";
+import { useSelector } from "react-redux";
+import { State } from "../../store";
+import { IDirectoryApp, IDirectoryFolder, TDirectory } from "../../store/reducers/directories/actionTypes";
 
 const MenuIconsGrid = () => {
-	const handleClick = () => {};
+  const appsDirectory = useSelector<State, TDirectory | undefined>(state => state.directories.directories.find(d => d.name === "Apps"));
+  const apps = appsDirectory as IDirectoryFolder;
+  const handleOpenApp = (app: IDirectoryApp) => {
+    console.log("Opening...", app);
+  };
   return (
     <div className="IconsGrid">
-      {Array.from(Array(12).keys()).map((v) => (
-        <div className="IconAppContainer" key={v}>
-          <Icon onClick={handleClick} src={FileImage} label="Archivos" />
-        </div>
-      ))}
+      {apps.inside.map((appItem, index) => {
+        const app = appItem as IDirectoryApp;
+        return (
+          <div className="IconAppContainer" key={app.name + index}>
+            <Icon onClick={() => handleOpenApp(app)} src={app.app.icon} label={app.name} />
+          </div>
+        )
+      })}
     </div>
   );
 };

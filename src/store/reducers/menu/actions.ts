@@ -1,4 +1,4 @@
-import {MenuActionTypes} from "./actionTypes";
+import { MenuActionTypes } from "./actionTypes";
 
 export interface ISetVisibleAction {
 	type: MenuActionTypes.SET_VISIBLE;

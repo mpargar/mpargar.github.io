@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import ProgramReducer from "./programs/ProgramReducer";
 import MenuReducer from "./menu/MenuReducer";
+import DirectoriesReducer from "./directories/DirectoriesReducer";
 
 const reducers = combineReducers({
-  programs: ProgramReducer,
-	menu: MenuReducer
+	menu: MenuReducer,
+	directories: DirectoriesReducer
 });
 
 export default reducers;
